@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import {AboutPage} from './AboutPage.js';
+
+
 
 
 function MyHeader(){
@@ -20,6 +23,7 @@ function Content(){
     <div className='Content'>
       <h2>Welcome to my site</h2>
       <p>Cupidatat magna adipisicing aute officia. Consectetur sit tempor laborum non culpa. Magna tempor aute esse non tempor officia. Occaecat eu ut ut incididunt sunt exercitation tempor magna laboris eu esse exercitation non. Occaecat laboris anim dolore ex. Enim irure aliqua reprehenderit aute esse dolor incididunt deserunt qui laborum veniam minim duis nulla.</p>
+      <AboutPage/>
     </div>
   )
 }
@@ -45,6 +49,7 @@ function App() {
       <MyHeader />
       <div className='MainContent'>
         <Content />
+        
         <Sidebar />
       </div>
       <Footer />
