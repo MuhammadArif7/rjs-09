@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { AboutPage } from './AboutPage.js';
 import Profile from './UserData';
+import { ConditionalRendering } from './ConditionalRendering';
 function MyHeader() {
   return (
     <div className='Header'>
@@ -23,6 +24,7 @@ function Content() {
       <AboutPage />
       <br/><hr/><br/>
       <Profile/>
+      <br/><hr/><br/>
     </div>
   )
 }
@@ -32,6 +34,8 @@ function Sidebar() {
     <div className='Sidebar'>
       <h2>Recent Events</h2>
       <p>Labore incididunt consectetur occaecat consequat fugiat. Eiusmod ut do duis ut esse excepteur cupidatat culpa voluptate duis. Excepteur sit proident enim id occaecat laborum voluptate enim anim reprehenderit do esse. Occaecat excepteur nostrud ullamco ex sint nisi dolor ad.</p>
+    <br /><hr /><br/>
+    <ConditionalRendering/>
     </div>
   )
 }
