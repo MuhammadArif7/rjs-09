@@ -3,6 +3,8 @@ import './App.css';
 import { AboutPage } from './AboutPage.js';
 import Profile from './UserData';
 import { ConditionalRendering } from './ConditionalRendering';
+import ShoppingList from './ShoppingList';
+
 function MyHeader() {
   return (
     <div className='Header'>
@@ -25,6 +27,7 @@ function Content() {
       <br/><hr/><br/>
       <Profile/>
       <br/><hr/><br/>
+      <ShoppingList/>
     </div>
   )
 }
