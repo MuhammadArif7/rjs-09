@@ -5,14 +5,29 @@ import Profile from './UserData';
 import { ConditionalRendering } from './ConditionalRendering';
 import ShoppingList from './ShoppingList';
 
+function MyButton() {
+  function handleClick() {
+    alert('You clicked me!');
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Click me
+    </button>
+  );
+}
+
 function MyHeader() {
   return (
     <div className='Header'>
-      <div className='TitleLine'><img className='logo' src={logo} /> DTS</div>
+      <div className='TitleLine'><img className='logo' src={logo} /> DTS
+      
+      </div>
       <ul className='Nav'>
         <li><a href=''>Home</a></li>
         <li><a href=''>About</a></li>
         <li><a href=''>Contact</a></li>
+        <li><MyButton/></li>
       </ul>
     </div>
   )
