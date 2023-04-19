@@ -4,20 +4,24 @@ import { AboutPage } from './AboutPage.js';
 import Profile from './UserData';
 import { ConditionalRendering } from './ConditionalRendering';
 import ShoppingList from './ShoppingList';
+import { useState } from 'react';
+import MyButtonCustom from './MyButtonCustom';
 
-function MyButton() {
-  function handleClick() {
-    alert('You clicked me!');
+function MyButton() 
+{
+  const [count, setCount] = useState(0);
+  function handleClick() 
+  {
+    setCount(count + 1);
+    //alert('You clicked me!');
   }
 
   return (
-    <button onClick={handleClick}>
-      Click me
-    </button>
+    <button onClick={handleClick}>Clicked: {count}</button>
   );
 }
 
-function MyHeader() {
+function MyHeader(){
   return (
     <div className='Header'>
       <div className='TitleLine'><img className='logo' src={logo} /> DTS
@@ -27,6 +31,7 @@ function MyHeader() {
         <li><a href=''>Home</a></li>
         <li><a href=''>About</a></li>
         <li><a href=''>Contact</a></li>
+        <li><MyButton/></li>
         <li><MyButton/></li>
       </ul>
     </div>
@@ -54,6 +59,8 @@ function Sidebar() {
       <p>Labore incididunt consectetur occaecat consequat fugiat. Eiusmod ut do duis ut esse excepteur cupidatat culpa voluptate duis. Excepteur sit proident enim id occaecat laborum voluptate enim anim reprehenderit do esse. Occaecat excepteur nostrud ullamco ex sint nisi dolor ad.</p>
     <br /><hr /><br/>
     <ConditionalRendering/>
+    <br /><hr /><br/>
+    <MyButtonCustom/>
     </div>
   )
 }
@@ -65,6 +72,7 @@ function Footer() {
 }
 
 function App() {
+  
   return (
     <div className="Container">
       <MyHeader />
